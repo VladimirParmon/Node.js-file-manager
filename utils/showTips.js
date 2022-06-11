@@ -1,4 +1,4 @@
-export function showTips() {
+export function showTips(promiseResolve) {
   console.log(`
   .exit ========================================> Exit the app (also ctrl + c);
   up ===========================================> Go upper from current directory;
@@ -18,5 +18,6 @@ export function showTips() {
   hash path_to_file ============================> Calculate hash for file;
   compress path_to_file path_to_destination ====> Compress file (using Brotli algorithm);
   decompress path_to_file path_to_destination ==> Decompress file (using Brotli algorithm);
-  `)
+  `);
+  promiseResolve();
 }
